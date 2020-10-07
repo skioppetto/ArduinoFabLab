@@ -23,8 +23,8 @@ const unsigned int RED_FREQ = 2349;
 const unsigned int GRE_FREQ = 2637;
 const unsigned int YEL_FREQ = 2794;
 
-const unsigned int SEQ_ON_MS = 800;
-const unsigned int SEQ_OFF_MS = 250;
+const unsigned int SEQ_ON_MS = 600;
+const unsigned int SEQ_OFF_MS = 200;
 const int SEQ_LUNG_INIT = 4;
 
 String sequenza = "";
@@ -213,6 +213,7 @@ void loop() {
         genera_sequenza(SEQ_LUNG_INIT);
         nuovo_gioco = true;
       }
+      return;
     }
   }
   if ((millis() - inizio_gioco) > TEMPO_GIOCO) {
